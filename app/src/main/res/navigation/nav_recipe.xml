@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/recipe_list_fragment">
+
+    <fragment
+        android:id="@+id/recipe_list_fragment"
+        android:name="in.foodie.fragment.RecipeListFragment"
+        android:label="RECIPE_LIST"
+        tools:layout="@layout/fragment_recipe_list">
+
+        <action
+            android:id="@+id/action_recipe_fragment_to_recipe_detail_fragment"
+            app:destination="@id/recipe_detail"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/recipe_detail"
+        android:name="in.foodie.fragment.RecipeDetailsFragment"
+        android:label="RECIPE_DETAIL"
+        tools:layout="@layout/fragment_recipe_detail">
+
+        <action
+            android:id="@+id/action_recipe_fragment_to_recipe_webview_fragment"
+            app:destination="@id/webview_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="recipeId"
+            app:argType="string" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/webview_fragment"
+        android:name="in.foodie.fragment.WebViewFragment"
+        android:label="Web"
+        tools:layout="@layout/webview_fragment">
+        <argument
+            android:name="url"
+            app:argType="string" />
+
+    </fragment>
+
+
+</navigation>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Foodie</string>
+    <string name="messgae_loading">Loading..</string>
+    <string name="messgae_network_error">Network Error.Please try again</string>
+    <string name="no_recipes_found">No Recipe Found!</string>
+    <string name="section_link_header">Info</string>
+    <string name="section_ingredients_header">Ingredients</string>
+    <string name="view_instruction_title"><u>View Instructions</u></string>
+    <string name="view_original_title"><u>View Original</u></string>
+
+</resources>
